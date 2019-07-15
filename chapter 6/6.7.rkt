@@ -1,0 +1,5 @@
+(define (type-of input)
+  (cond ((number? input)'number)
+        ((sentence? input)'sentence)
+        ((word? input) 'word)
+        ((boolean? input) 'boolean)))

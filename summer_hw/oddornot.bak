@@ -1,0 +1,4 @@
+(define (odds lst)
+  (length (filter odd?)))
+
+(odds '(5 12 31 7 98 13)) 
