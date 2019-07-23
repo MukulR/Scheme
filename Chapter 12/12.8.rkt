@@ -1,0 +1,6 @@
+(define (numbers phrase)
+  (if (empty? phrase)
+      '()
+      (if (number? (first phrase))
+          (sentence (first phrase) (numbers (butfirst phrase)))
+          (numbers (butfirst phrase)))))

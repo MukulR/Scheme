@@ -1,0 +1,6 @@
+(define (remove wd phrase)
+  (if (empty? phrase)
+      '()
+      (if (not (equal? (first phrase) wd))
+          (sentence (first phrase) (remove wd (butfirst phrase)))
+          (remove wd (butfirst phrase)))))
