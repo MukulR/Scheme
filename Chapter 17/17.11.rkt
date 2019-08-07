@@ -1,0 +1,5 @@
+(define (before-in-list? phrase wd1 wd2)
+  (cond ((null? phrase) #f)
+        ((equal? (car phrase) wd1) (member? wd2 (cdr phrase)))
+        ((equal? (car phrase) wd2) #f)
+        (else (before-in-list? (cdr phrase) wd1 wd2))))

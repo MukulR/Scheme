@@ -1,0 +1,5 @@
+(define (branch element lst)
+  (let ((index (car element)))
+    (if (= (length element) 1)
+      (list-ref lst (- index 1))
+      (branch (cdr element) (list-ref lst (- index 1))))))

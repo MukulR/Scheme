@@ -1,0 +1,5 @@
+(define (same-shape? phrase1 phrase2)
+  (cond ((and (empty? phrase1) (empty? phrase2)) #t)
+        ((not (equal? (count phrase1) (count phrase2))) #f)
+        ((equal? (count (first phrase1)) (count (first phrase2))) (same-shape? (butfirst phrase1) (butfirst phrase2)))
+        (else #f)))
